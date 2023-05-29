@@ -1,0 +1,30 @@
+Algoritmo Fibonacci
+{
+    Entero c, n1, n2, s, nu, con
+	
+	Imprimir "ingrese el primer numero:";
+	leer (nu);
+
+    Imprimir "Ingrese la cantidad de números que desea mostrar: ";
+    Leer (c);
+   {	
+    Si (c<= 0) Entonces
+    Imprimir "La cantidad de números debe ser mayor a cero.";
+    Sino 
+        n1 = 0
+        n2 = nu
+		
+        Imprimir "Los números de la serie de Fibonacci son: "	
+        con = -1
+	{	
+        Mientras (con<= c) Hacer
+            Escribir n1
+            s = n1 + n2
+            n1 = n2
+            n2 = s
+            con = con + 1
+        }Fin Mientras
+    }Fin Si
+	
+}FinAlgoritmo
+ 

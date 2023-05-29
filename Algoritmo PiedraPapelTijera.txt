@@ -1,0 +1,74 @@
+Algoritmo PiedraPapelTijera
+{
+//Definicion de Variables
+	Entero p1, p2, p3, o1, o2, o3, r 
+	Entero pu1, pu2, pu3 
+	Cadens opcionesDisponibles
+	opcionesDisponibles= "1, 2, 3"
+	
+	pu1= 0
+	pu2= 0
+	pu3= 0
+	
+	Para r= 1 Hasta 3 Hacer
+		Imprimir: "=== Ronda ", ronda, " ==="
+		
+		Imprimir: "Turno de participante 1:";
+		Imprimir: "Elija una opción (1: Piedra, 2: Papel, 3: Tijera):";
+		Leer opcion1
+		
+		Imprimir: ("Turno de participante 2:");
+		Imprimir: "Elija una opción (1: Piedra, 2: Papel, 3: Tijera):"
+		Leer opcion2
+		
+		Imprimir: ("Turno de participante 3:");
+		Imprimir: ("Elija una opción (1: Piedra, 2: Papel, 3: Tijera)):";
+		Leer opcion3
+		
+		Si opcion1 = opcion2 Y opcion2 = opcion3 Entonces
+			Imprimir: ("Empate en la ronda ");, r
+		Sino
+	      Si (opcion1 = 1 Y opcion2 = 3) O (opcion1 = 2 Y opcion2 = 1) O (opcion1 = 3 Y opcion2 = 2) Entonces
+		Imprimir: ("Participante 1 gana la ronda ");, r
+		puntuacion1 <- puntuacion1 + 1
+		Sino
+		Si (opcion2 = 1 Y opcion3 = 3) O (opcion2 = 2 Y opcion3 = 1) O (opcion2 = 3 Y opcion3 = 2) Entonces
+		Imprimir "Participante 2 gana la ronda ", r
+		puntuacion2 <- puntuacion2 + 1
+		Sino
+		Si (opcion1 = 1 Y opcion3 = 3) O (opcion1 = 2 Y opcion3 = 1) O (opcion1 = 3 Y opcion3 = 2) Entonces
+		Imprimir: ("Participante 3 gana la ronda ");, r
+		puntuacion3 <- puntuacion3 + 1
+		Sino
+		si opcion1>3 o opcion2>3 o opcion3>3 entonces 
+		Imprimir: ("ronda no valida");
+							
+	      FinSi
+		Fin Si
+		Fin Si
+		Fin Si
+		Fin Si
+		
+		Imprimir ""
+	Fin Para
+	
+	Imprimir: ("=== Resultados ===");
+	Imprimir: ("Puntuación del participante 1:");, pu1
+	Imprimir: ("Puntuación del participante 2:"), pu2
+	Imprimir: ("Puntuación del participante 3:"), pu3
+	
+	Si pun1 = pu2 Y pu2 = pu3 Entonces
+	Imprimir: ("Empate entre todos los participantes");
+	Sino
+	Si pu1 > pu2 Y pu1 > pu3 Entonces
+	Imprimir "El ganador es el participante 1"
+	Sino
+	Si pu2 > pu1 Y pu2 > pu3 Entonces
+	Imprimir "El ganador es el participante 2"
+	Sino
+	Imprimir "El ganador es el participante 3"
+	Fin Si
+	Fin Si
+	Fin Si
+	}
+//FinAlgoritmo

@@ -1,0 +1,21 @@
+Algoritmo CalculoInteres
+//Definir Variables
+{
+  Reales in, ta, a, ai, m, af
+Para(a=1627; a<=1976; a=a++)
+
+   Imprimir "Ingrese el monto inicial:";
+  Leer (m);
+  
+  Imprimir "Ingrese el año inicial:";
+  Leer (ai);
+  
+  Imprimir "Ingrese la tasa de interés (en decimal):"
+  Leer (ta);
+
+in=m*ta
+//Fin Para
+  Imprimir "El monto final después de 396 años es:", m
+ 
+}
+FinAlgoritmo
